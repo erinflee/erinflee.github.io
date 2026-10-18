@@ -126,35 +126,88 @@
               />
             </a>
             <div class="publication-body">
-              <h3 class="publication-title">
-                Probing Physical Readability Under Temporal Straightening in
-                Visual World Models
-              </h3>
-              <p class="publication-authors">
-                Daniel Hacobian, <strong>Erin F. Lee</strong>, Utsav Sharma,
-                Eeshan G. Dandamudi, Mohammed Mahfoud, Anusha Mujumdar
+              <div class="publication-header">
+                <h3 class="publication-title">
+                  Probing Physical Readability Under Temporal Straightening in
+                  Visual World Models
+                </h3>
+                <div class="publication-date">
+                  <span>Dec 2026</span>
+                  <span class="publication-location">Sydney, AU</span>
+                  <button
+                    class="abstract-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="abstract-straightening"
+                  >
+                    expand
+                  </button>
+                </div>
+                <p class="publication-authors">
+                  Daniel Hacobian, <strong>Erin F. Lee</strong>, Utsav Sharma,
+                  Eeshan G. Dandamudi, Mohammed Mahfoud, Anusha Mujumdar
+                </p>
+              </div>
+              <div class="publication-tags">
+                <span class="pub-tag pub-tag-conf">NeurIPS 2026</span>
+                <ul class="publication-venues">
+                  <li>World Models in Physical AI (WM PAI) Workshop</li>
+                  <li>
+                    From Pretrained Representations to Acting Agents (PTA)
+                    Workshop
+                  </li>
+                </ul>
+              </div>
+              <div class="publication-links">
+                <a
+                  href="https://openreview.net/forum?id=NaZjr7ZlTU"
+                  target="_blank"
+                  class="publication-link"
+                  ><i class="fa-regular fa-file-lines"></i> OpenReview (WM
+                  PAI)</a
+                >
+                <a
+                  href="https://openreview.net/forum?id=8OMSCDjxbE"
+                  target="_blank"
+                  class="publication-link"
+                  ><i class="fa-regular fa-file-lines"></i> OpenReview (PTA)</a
+                >
+              </div>
+            </div>
+            <div
+              class="publication-abstract"
+              id="abstract-straightening"
+              hidden
+            >
+              <p>
+                Joint-embedding world models perform latent planning by
+                predicting how visual representations change under candidate
+                actions and comparing predicted states with a goal in latent
+                space. Temporal straightening improves planning in the training
+                protocol introduced by Wang et al, but its effect on the
+                information available inside the model has not been measured
+                directly. We reproduce the best-performing straightening-OFF and
+                straightening-ON configurations reported in that work,
+                preserving their prescribed learning rates, and train layer-wise
+                linear probes for position, velocity, acceleration, speed,
+                direction, and object orientation across UMaze, Wall, and PushT.
+                Because DINOv2 encodes one frame at a time, we probe position
+                from individual features, velocity from first temporal
+                differences, and acceleration from second temporal differences.
+                Position is strongly readable from individual frames, whereas
+                translational motion is much more readable from temporal
+                changes. PushT object orientation is readable while angular
+                velocity and acceleration remain weak. Because the frozen DINO
+                features are identical across configurations, differences appear
+                only after the learned projection head and in the dynamics
+                predictor, and they are environment dependent: the projected
+                readout weakens substantially on UMaze, changes only modestly on
+                Wall while becoming readable earlier, and improves a subset of
+                spatial PushT readouts. Our results characterize what changes
+                under the published straightening configuration, while showing
+                that linear readability alone does not establish whether the
+                planner uses the decoded information.
               </p>
-              <ul class="publication-venues">
-                <li>
-                  NeurIPS 2026 Workshop on World Models in Physical AI
-                  <a
-                    href="https://openreview.net/forum?id=NaZjr7ZlTU"
-                    target="_blank"
-                    class="publication-link"
-                    >OpenReview</a
-                  >
-                </li>
-                <li>
-                  NeurIPS 2026 Workshop on PTA: From Pretrained Representations
-                  to Acting Agents
-                  <a
-                    href="https://openreview.net/forum?id=8OMSCDjxbE"
-                    target="_blank"
-                    class="publication-link"
-                    >OpenReview</a
-                  >
-                </li>
-              </ul>
             </div>
           </article>
         </div>
@@ -168,7 +221,6 @@
             <span class="skill-tag">HuggingFace</span>
             <span class="skill-tag">Data Analysis</span>
             <span class="skill-tag">C / C++</span>
-            <span class="skill-tag">Arduino</span>
             <span class="skill-tag">PyTorch</span>
             <span class="skill-tag">SQL</span>
             <span class="skill-tag">AWS</span>
