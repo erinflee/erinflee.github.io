@@ -1,3 +1,22 @@
+document.querySelectorAll(".abstract-toggle").forEach((btn) => {
+  const abstract = document.getElementById(btn.getAttribute("aria-controls"));
+  btn.addEventListener("click", () => {
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!open));
+    btn.textContent = open ? "expand" : "collapse";
+    abstract.hidden = open;
+  });
+
+  // Clicking anywhere else on the card toggles too
+  const card = btn.closest(".publication");
+  card.classList.add("is-expandable");
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a, .abstract-toggle, .publication-abstract")) return;
+    if (window.getSelection().toString()) return;
+    btn.click();
+  });
+});
+
 let app = document.getElementById("typewriter-app");
 
 let typewriter = new Typewriter(app, {
@@ -39,3 +58,4 @@ let granimInstance = new Granim({
     },
   },
 });
+
